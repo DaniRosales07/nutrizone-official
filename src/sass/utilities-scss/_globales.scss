@@ -1,0 +1,83 @@
+/*GLOBALES ESCRITORIO*/
+
+*,
+*:before,
+*:after {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+//RESET 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// FUENTES
+
+/*FUENTES - DESKTOP */
+
+h1 {
+    font-size: nth($list: $fuentes-desktop, $n: 1);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: nth($list: $fuentes-desktop, $n: 2);
+}
+
+h3 {
+    font-size: nth($list: $fuentes-desktop, $n: 3);
+}
+
+h4 {
+    font-size: nth($list: $fuentes-desktop, $n: 4);
+}
+
+h5 {
+    font-size: nth($list: $fuentes-desktop, $n: 5) !important;
+    font-weight: bold;
+}
+
+p {
+    font-size: nth($list: $fuentes-desktop, $n: 6);
+}
+
+.titulos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+    font-weight: 700;
+    color: $color-secundario;
+}
+
+// LINKS 
+a {
+    text-decoration: none;
+    color: $color-primario;
+}
+
+a:visited {
+    color: $color-primario;
+}
+
+//FONDOS
+.fondo-blanco {
+    background-color: $color-primario;
+    color: $color-secundario;
+}
+
+//UTILIDADES
+.centrar-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.espacios-verticales {
+    margin: 2rem 0rem;
+}

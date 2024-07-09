@@ -1,0 +1,11 @@
+.boton-comenzar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 2px solid $color-primario;
+    border-radius: 10px;
+    background-color: $color-secundario;
+    color: $color-primario;
+    font-size: 2.5rem;
+}

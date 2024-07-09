@@ -1,0 +1,26 @@
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    padding: 0rem 2rem;
+    gap: 2rem;
+}
+
+.grid2 div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $color-secundario;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+
+.grid2 img {
+    width: 60%;
+}
+
+@media (max-width:720px) {
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+}

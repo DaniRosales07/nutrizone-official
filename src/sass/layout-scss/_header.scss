@@ -1,0 +1,54 @@
+.navbar {
+    background-color: $color-primario !important;
+    border-bottom: 3px solid $color-secundario;
+}
+
+.container-fluid {
+    font-weight: 700;
+}
+
+.navbar-brand {
+    font-size: 2rem !important;
+    color: $color-secundario !important;
+}
+
+.navbar-collapse {
+    color: $color-secundario !important;
+}
+
+.nav-item {
+    font-size: 2rem !important;
+    color: $color-secundario !important;
+}
+
+.nav-link {
+    color: $color-secundario !important;
+    display: flex;
+}
+
+.active {
+    color: $color-secundario !important;
+}
+
+.btn-outline-success {
+    --bs-btn-color: #fd5820 !important;
+    --bs-btn-border-color: #fd5820 !important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #fd5820 !important;
+    --bs-btn-hover-border-color: #fd5820 !important;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #fd5820 !important;
+    --bs-btn-active-border-color: #fd5820 !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fd5820 !important;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #fd5820 !important;
+    --bs-gradient: none;
+}
+
+.dropdown-item {
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    color: $color-secundario !important;
+}

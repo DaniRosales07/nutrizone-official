@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+    background-color: $color-secundario;
+    color: $color-primario;
+    margin-top: 1rem;
+}
+
+.footer p {
+    font-size: 2rem;
+    font-weight: 600;
+}

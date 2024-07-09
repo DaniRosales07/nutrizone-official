@@ -1,0 +1,198 @@
+// Productos Generales
+.container-productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0rem;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    width: 90%;
+}
+
+.producto {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    background-color: $color-cuarto;
+    border: 2px solid $color-secundario;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    color: $color-quinto;
+    margin: 1rem;
+    box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.75);
+    transition: transform 0.3s;
+    font-weight: 600;
+}
+
+.producto img {
+    width: 70%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.boton-productos {
+    display: flex;
+    padding: 1rem 2rem;
+    border: 2px solid $color-primario;
+    border-radius: 10px;
+    background-color: $color-secundario;
+}
+
+.boton-productos a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $color-primario;
+}
+
+//Producto Detalle 
+.container-producto-detail {
+    display: flex;
+    justify-content: center;
+}
+
+.producto-detail {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-cuarto;
+    border: 2px solid $color-secundario;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    color: $color-quinto;
+    margin: 1rem;
+    box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.75);
+    transition: transform 0.3s;
+    font-weight: 600;
+}
+
+.producto-detail-div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0rem 2rem;
+    padding: 0rem 2rem;
+}
+
+//Contador de Items
+.contenedor-item-count {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.item-count {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0rem 1rem 0rem 0rem;
+}
+
+.sumador {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.sumador p {
+    margin: 0rem 1rem 0rem 0rem;
+}
+
+.boton-contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    border: 2px solid $color-primario;
+    border-radius: 10px;
+    background-color: $color-secundario;
+    color: $color-primario;
+    font-size: 1.5rem;
+    margin: 0rem 1rem 1rem 0rem;
+}
+
+.agregar-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 2px solid $color-primario;
+    border-radius: 10px;
+    background-color: $color-secundario;
+    color: $color-primario;
+    font-size: 1.5rem;
+}
+
+//carrito navbar
+.carrito-mobile {
+    display: none;
+}
+
+.carrito-navbar a {
+    display: flex;
+    text-align: center;
+    color: $color-secundario;
+}
+
+.carrito-navbar img {
+    max-width: 40px;
+}
+
+//Carrito de Compras
+.carrito-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-cuarto;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 4px solid $color-secundario;
+    margin: 0rem 0rem 2rem 2rem;
+    width: 350px;
+    font-weight: 700;
+}
+
+.total-compra {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 0rem 0rem 2rem 2rem;
+    width: fit-content;
+}
+
+@media (max-width: 1000px) {
+    .carrito-mobile {
+        display: block;
+    }
+    .carrito-escritorio {
+        display: none;
+    }
+}
+
+@media (max-width:720px) {
+    .container-producto-detail {
+        flex-direction: column;
+        max-width: 400px;
+        text-align: center;
+    }
+    .producto-detail {
+        flex-direction: column;
+    }
+    .contenedor-item-count {
+        align-items: center;
+    }
+    .agregar-carrito {
+        padding: 0.1rem;
+    }
+}
