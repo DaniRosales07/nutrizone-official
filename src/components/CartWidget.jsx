@@ -12,7 +12,7 @@ const CartWidget = () => {
   return (
     <div className='carrito-navbar'>
         <Link to="/compras">
-        <img src="../public/carrito.png" alt="" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/nutrizone-official.appspot.com/o/carrito.webp?alt=media&token=e061fdac-0181-43e1-846a-bc12df1004db" alt="" />
         <p>  {cantidadProductos()}</p>
         </Link>
     </div>
