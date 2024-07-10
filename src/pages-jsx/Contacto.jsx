@@ -1,6 +1,6 @@
 import {useForm } from "react-hook-form";
 
-
+''
 const Contacto = () => {
 
 const {register, handleSubmit} =useForm ();

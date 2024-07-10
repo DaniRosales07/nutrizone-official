@@ -4,14 +4,19 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: $color-terciario;
     color: $color-primario;
+    margin-bottom: 2rem;
+}
+
+@media (max-width:720px) {
+    .formulario {
+        flex-direction: column;
+    }
 }
 
 .formulario {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     font-size: 2rem;
 }
 

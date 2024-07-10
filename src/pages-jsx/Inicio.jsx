@@ -1,6 +1,6 @@
 import React from 'react'
-import imagen1 from '../../public/imagen1.webp'
 import { Link } from 'react-router-dom'
+
 const Inicio = () => {
   return (
     <section className='grid2'>
@@ -10,7 +10,7 @@ const Inicio = () => {
       <Link to="/productos/frutos-secos" ><button className='boton-comenzar'>Comenzar</button> </Link>
     </div>
     <div>
-    <img src={imagen1} alt="imagen inicio" />
+    <img src="https://firebasestorage.googleapis.com/v0/b/nutrizone-official.appspot.com/o/imagen1.webp?alt=media&token=3bf94130-c90c-4ad4-a1f6-4e4c60a7aa69" alt="imagen inicio" />
     </div>
 
     </section>

@@ -21,6 +21,9 @@ function NavBar(props) {
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+              <Link aria-current="page" className="nav-link active" to="/">Inicio</Link>
+            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -54,11 +57,6 @@ function NavBar(props) {
               <Link aria-current="page" className="nav-link active" to="/Contacto">Contacto</Link>
             </li>
           </ul>
-
-          <form className="d-flex" role="search">
-            <input aria-label="Search" className="form-control me-2" placeholder="Buscar" type="search" />
-            <button className="btn btn-outline-success" type="submit">Buscar</button>
-          </form>
         </div>
       </div>
     </nav>
