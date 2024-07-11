@@ -28,7 +28,6 @@ estaEnElCarrito.cantidad += cantidad;
   nuevoCarrito.push(itemAgregado);
   }
   setCarrito(nuevoCarrito);
-  console.log (nuevoCarrito)
 }
 
 const cantidadProductos = () => {

@@ -51,7 +51,7 @@ function NavBar(props) {
             <Link aria-current="page" className="nav-link active" to="/compras">Compras</Link>
             </li>
             <li className="nav-item carrito-escritorio">
-            <Link to="/compras" className="nav-link active"> Compras <CartWidget/> </Link>
+            <Link to="/compras" className="nav-link active"> <CartWidget/> </Link>
             </li>
             <li className="nav-item">
               <Link aria-current="page" className="nav-link active" to="/Contacto">Contacto</Link>

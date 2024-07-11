@@ -6,7 +6,6 @@ const Contacto = () => {
 const {register, handleSubmit} =useForm ();
 
 const enviar = (dataformulario) => {
-  console.log (dataformulario);
 }
 
   return (

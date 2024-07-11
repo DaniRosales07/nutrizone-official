@@ -8,7 +8,6 @@ const Carrito = () => {
   const [formData, setFormData] = useState(null);
 
   const enviar = (dataformulario) => {
-    console.log(dataformulario);
     setFormData(dataformulario);
   };
 
@@ -80,7 +79,7 @@ const Carrito = () => {
                   <button className='boton-contador' onClick={handleFinalizarCompra}>Realizar Compra</button>
                   <button className='boton-contador' onClick={handleVaciar}>Vaciar Carrito</button>
                 </div> :
-                <h2 className='titulos'>Aprovecha nuestras Ofertas</h2>
+                <h2 className='titulos'>Aprovecha nuestras Ofertas en nuestra Sección Productos</h2>
             }
           </div>
         </div>

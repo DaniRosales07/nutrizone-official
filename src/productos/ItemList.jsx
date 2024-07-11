@@ -5,7 +5,6 @@ import Item from './Item'
 const ItemList = ({productos, titulo}) => {
   return (
     <div className='container-productos fondo-blanco'>
-      <h1 className='titulos'>Bienvenidos a la Sección Productos</h1>
       <h2 className='titulos'>{titulo}</h2>
       <h4 className='espacios-verticales centrar-contenido'>Recorda que todos los productos que aparecen, son por 1/2kg o por unidad</h4>
 

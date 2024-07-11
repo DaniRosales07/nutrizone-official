@@ -1,15 +1,19 @@
 .navbar {
     background-color: $color-primario !important;
-    border-bottom: 3px solid $color-secundario;
+    border-bottom: 5px solid $color-secundario;
 }
 
 .container-fluid {
     font-weight: 700;
+    display: flex !important;
+    text-align: center !important;
+    align-items: flex-start !important;
 }
 
 .navbar-brand {
     font-size: 2rem !important;
     color: $color-secundario !important;
+    padding-top: 0.5rem;
 }
 
 .navbar-collapse {
@@ -51,4 +55,9 @@
     font-size: 1.4rem !important;
     font-weight: 600 !important;
     color: $color-secundario !important;
+}
+
+.navbar-toggler-icon {
+    width: 3.5em !important;
+    height: 3.5em !important;
 }
