@@ -10,7 +10,7 @@ const ItemCount = ({cantidad, handleRestar, handleSumar, handleAgregar}) => {
         <div className='sumador'>
 
         <button className='boton-contador' onClick={ handleRestar}>-</button>
-        <p>{cantidad}</p>
+        <h4>{cantidad}</h4>
         <button className='boton-contador' onClick={handleSumar}>+</button>
 
         </div>

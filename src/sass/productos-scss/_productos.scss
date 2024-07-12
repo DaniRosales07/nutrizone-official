@@ -23,23 +23,18 @@
 
 .producto {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     flex-direction: column;
     background-color: $color-primario;
-    border: 2px solid $color-secundario;
+    border: 5px solid $color-secundario;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 3rem;
     text-align: center;
     align-items: center;
     color: $color-quinto;
-    margin: 1rem;
     box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.75);
     transition: transform 0.3s;
     font-weight: 600;
-}
-
-.producto div {
-    padding: 0rem 2rem;
 }
 
 .producto img {
@@ -52,15 +47,26 @@
 .boton-productos {
     display: flex;
     padding: 1rem 2rem;
-    border: 2px solid $color-primario;
+    border: 4px solid $color-primario;
     border-radius: 10px;
     background-color: $color-secundario;
 }
 
+.boton-productos:hover {
+    background-color: white;
+    border: 4px solid $color-secundario;
+}
+
 .boton-productos a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: $color-primario;
+}
+
+.boton-productos a:hover {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-secundario;
 }
 
 //Producto Detalle 
@@ -99,7 +105,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    align-items: flex-start;
+    align-items: center;
+    max-width: 350px;
 }
 
 .item-count {
@@ -108,7 +115,6 @@
     text-align: center;
     align-items: center;
     width: fit-content;
-    margin: 0rem 1rem 0rem 0rem;
 }
 
 .sumador {
@@ -118,33 +124,38 @@
     align-items: center;
 }
 
-.sumador p {
-    margin: 0rem 1rem 0rem 0rem;
+.sumador h4 {
+    font-weight: 700;
 }
 
 .boton-contador {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     border: 2px solid $color-primario;
     border-radius: 10px;
     background-color: $color-secundario;
     color: $color-primario;
     font-size: 1.5rem;
-    margin: 0rem 1rem 1rem 0rem;
+    margin: 0rem 1rem 0rem 1rem;
 }
 
 .agregar-carrito {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     border: 2px solid $color-primario;
     border-radius: 10px;
     background-color: $color-secundario;
     color: $color-primario;
     font-size: 1.5rem;
+}
+
+.div-carrito {
+    display: flex;
+    max-width: fit-content;
 }
 
 //carrito navbar
