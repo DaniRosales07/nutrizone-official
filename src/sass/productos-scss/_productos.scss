@@ -1,4 +1,3 @@
-// Productos Generales
 .container-productos {
     display: flex;
     flex-direction: column;
@@ -69,7 +68,6 @@
     color: $color-secundario;
 }
 
-//Producto Detalle 
 .container-producto-detail {
     display: flex;
     justify-content: center;
@@ -100,7 +98,6 @@
     padding: 0rem 2rem;
 }
 
-//Contador de Items
 .contenedor-item-count {
     display: flex;
     justify-content: center;
@@ -158,7 +155,6 @@
     max-width: fit-content;
 }
 
-//carrito navbar
 .carrito-mobile {
     display: none;
 }
@@ -173,7 +169,6 @@
     max-width: 40px;
 }
 
-//Carrito de Compras
 .carrito-container {
     display: flex;
     flex-direction: column;
@@ -226,4 +221,21 @@
     .agregar-carrito {
         padding: 0.2rem;
     }
+}
+
+.swal2-confirm {
+    background-color: $color-secundario;
+    font-size: 1.2rem;
+}
+
+.swal2-popup {
+    width: 35em;
+}
+
+.swal2-title {
+    font-size: 3em;
+}
+
+.swal2-html-container {
+    font-size: 2em !important;
 }

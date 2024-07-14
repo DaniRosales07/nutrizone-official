@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 
 const Carrito = () => {
-  // Formulario de Compra - Funciones
+  
   const { register, handleSubmit, reset } = useForm();
   const [formData, setFormData] = useState(null);
 
@@ -11,7 +12,7 @@ const Carrito = () => {
     setFormData(dataformulario);
   };
 
-  // Carrito - Funciones
+  
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
 
   const handleVaciar = () => {
@@ -40,7 +41,7 @@ const Carrito = () => {
     window.open(urlWhatsApp, '_blank');
   };
 
-  // Visual de Carrito
+  
   return (
     <section>
       <div>
@@ -79,7 +80,10 @@ const Carrito = () => {
                   <button className='boton-contador' onClick={handleFinalizarCompra}>Realizar Compra</button>
                   <button className='boton-contador' onClick={handleVaciar}>Vaciar Carrito</button>
                 </div> :
-                <h2 className='titulos'>Aprovecha nuestras Ofertas en nuestra Sección Productos</h2>
+                <div>
+                <h2 className='titulos'> ¿Aún no hay artículos? Continúa explorando para aprovechar todas nuestras ofertas  </h2>
+                <Link to="/productos/frutos-secos"><button className='boton-comenzar'>Comenzar</button></Link>
+                </div>
             }
           </div>
         </div>

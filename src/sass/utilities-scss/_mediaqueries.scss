@@ -1,7 +1,3 @@
-// FUENTES-QUERIES
-
-/*GLOBALES 1024PX */
-
 @media (max-width: 1024px) {
     h1 {
         font-size: nth($list: $fuentes-1024, $n: 1);
@@ -25,9 +21,6 @@
         font-size: 4rem;
     }
 }
-
-
-/*GLOBALES 400PX */
 
 @media (max-width: 400px) {
     h1 {
