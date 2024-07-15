@@ -13,7 +13,7 @@ function Main ()
   <main>
 
 <Routes>
-<Route path='/' element= { <Inicio/> } />
+<Route path='*' element= { <Inicio/> } />
 <Route path='/compras' element= { <Carrito/> } />
 <Route path='/productos' element= { <ItemListContainer/> } />
 <Route path='/productos/:categoria' element= { <ItemListContainer/> } />
