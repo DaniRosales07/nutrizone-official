@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
+import { db } from '../firebase/firebase';
+import { addDoc, collection } from 'firebase/firestore';
 
 const Carrito = () => {
   
@@ -12,14 +14,13 @@ const Carrito = () => {
     setFormData(dataformulario);
   };
 
-  
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
 
   const handleVaciar = () => {
     vaciarCarrito();
   };
 
-  const handleFinalizarCompra = () => {
+  const handleFinalizarCompra = async () => {
     if (!formData) {
       alert('Por favor, complete el formulario de contacto antes de finalizar la compra.');
       return;
@@ -32,16 +33,34 @@ const Carrito = () => {
     mensaje += `Teléfono: ${formData.telefono}%0A%0ADetalles de la compra:%0A`;
 
     carrito.forEach(prod => {
-      mensaje += `Producto: ${prod.titulo}%0APrecioUnitario: $${prod.precio}%0ACantidad: ${prod.cantidad}%0APrecio Total: $${prod.precio * prod.cantidad}%0A%0A`;
-    });
+      mensaje += `Producto: ${prod.titulo}%0APrecioUnitario: $${prod.precio}%0ACantidad: ${prod.cantidad}%0APrecio Total: $${prod.precio * prod.cantidad}%0A%0A`;    });
 
     mensaje += `Total de la compra: $${precioTotal()}`;
+
+    // Enviar los datos a Firestore
+    try {
+      await addDoc(collection(db, 'compras'), {
+        nombre: formData.nombre,
+        direccion: formData.direccion,
+        telefono: formData.telefono,
+        carrito: carrito,
+        total: precioTotal(),
+        fecha: new Date(),
+      });
+      alert('Los detalles de tu compra han sido enviados a nuestra base de datos.');
+
+      // Vaciar el carrito después de enviar los datos
+      vaciarCarrito();
+
+    } catch (error) {
+      console.error('Error al guardar la compra en la base de datos: ', error);
+      alert('Hubo un error al guardar tu compra. Por favor, inténtalo de nuevo.');
+    }
 
     const urlWhatsApp = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
     window.open(urlWhatsApp, '_blank');
   };
 
-  
   return (
     <section>
       <div>
@@ -81,8 +100,8 @@ const Carrito = () => {
                   <button className='boton-contador' onClick={handleVaciar}>Vaciar Carrito</button>
                 </div> :
                 <div>
-                <h2 className='titulos'> ¿Aún no hay artículos? Continúa explorando para aprovechar todas nuestras ofertas  </h2>
-                <Link to="/productos/frutos-secos"><button className='boton-comenzar'>Comenzar</button></Link>
+                  <h2 className='titulos'> ¿Aún no hay artículos? Continúa explorando para aprovechar todas nuestras ofertas  </h2>
+                  <Link to="/productos/frutos-secos"><button className='boton-comenzar'>Comenzar</button></Link>
                 </div>
             }
           </div>
