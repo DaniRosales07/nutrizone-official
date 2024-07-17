@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import ItemListContainer from '../productos/ItemListContainer';
 import ItemDetailContainer from '../productos/ItemDetailContainer';
+import TestimonialSlider from '../components/Testimonios';
 
 const Inicio = () => {
   return (
@@ -28,6 +29,10 @@ const Inicio = () => {
         <Route path='/productos/:categoria' element={<ItemListContainer />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
       </Routes>
+      </div>
+
+      <div>
+        <TestimonialSlider/>
       </div>
     </section>
   );

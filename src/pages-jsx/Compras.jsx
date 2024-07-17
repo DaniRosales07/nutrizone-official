@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import { db } from '../firebase/firebase';
 import { addDoc, collection } from 'firebase/firestore';
+import Swal from 'sweetalert2';
 
 const Carrito = () => {
   
@@ -37,7 +38,7 @@ const Carrito = () => {
 
     mensaje += `Total de la compra: $${precioTotal()}`;
 
-    // Enviar los datos a Firestore
+
     try {
       await addDoc(collection(db, 'compras'), {
         nombre: formData.nombre,
@@ -47,14 +48,23 @@ const Carrito = () => {
         total: precioTotal(),
         fecha: new Date(),
       });
-      alert('Los detalles de tu compra han sido enviados a nuestra base de datos.');
+      Swal.fire({
+        title: 'Compra registrada',
+        text: 'Los detalles de tu compra han sido enviados a nuestra base de datos',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
 
-      // Vaciar el carrito después de enviar los datos
       vaciarCarrito();
 
     } catch (error) {
       console.error('Error al guardar la compra en la base de datos: ', error);
-      alert('Hubo un error al guardar tu compra. Por favor, inténtalo de nuevo.');
+      Swal.fire({
+        title: 'Error',
+        text: 'Error al enviar pedido a base de datos',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
     }
 
     const urlWhatsApp = `https://wa.me/${numeroTelefono}?text=${mensaje}`;

@@ -35,8 +35,8 @@ const ItemDetail = ({ item }) => {
           <div className="producto-detail-div">
             <h4>{item.titulo}</h4>
             <p>Categoría: {item.categoria}</p>
-            <p>Descripción: {item.descripcion}</p>
-            <p>Precio: $ {item.precio}</p>
+            <p>{item.descripcion}</p>
+            <h4>$ {item.precio}</h4>
             <ItemCount 
               cantidad={cantidad} 
               handleSumar={handleSumar} 

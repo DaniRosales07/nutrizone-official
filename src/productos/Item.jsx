@@ -18,7 +18,7 @@ const Item = ({ producto }) => {
 
   const handleAgregar = () => {
     agregarAlCarrito(producto, cantidad);
-    setCantidad(1); // Resetear el contador a 1
+    setCantidad(1); 
     Swal.fire({
       title: 'Agregado',
       text: 'El producto ha sido agregado al carrito.',
