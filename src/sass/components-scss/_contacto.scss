@@ -1,0 +1,17 @@
+.container-contactos {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem 2rem;
+    img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 720px) {
+    .container-contactos {
+        img {
+            width: 50%;
+        }
+    }
+}

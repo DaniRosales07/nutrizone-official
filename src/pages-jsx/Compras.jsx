@@ -12,6 +12,12 @@ const Carrito = () => {
   const [formData, setFormData] = useState(null);
 
   const enviar = (dataformulario) => {
+    Swal.fire({
+      title: 'Datos Registrados',
+      text: 'Tus Datos de Contacto ya estan registrados',
+      icon: 'succes',
+      confirmButtonText: 'OK'
+    });
     setFormData(dataformulario);
   };
 
@@ -23,7 +29,12 @@ const Carrito = () => {
 
   const handleFinalizarCompra = async () => {
     if (!formData) {
-      alert('Por favor, complete el formulario de contacto antes de finalizar la compra.');
+      Swal.fire({
+        title: 'Error',
+        text: 'Por favor, complete los datos de contacto antes de finalizar la compra.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
       return;
     }
 
@@ -83,7 +94,7 @@ const Carrito = () => {
             <input type="text" placeholder="Ingresa tu Nombre" {...register("nombre")} />
             <input type="text" placeholder="Ingresa tu direccion" {...register("direccion")} />
             <input type="phone" placeholder="Ingresa tu Teléfono" {...register("telefono")} />
-            <button className="boton-enviar" type="submit">Enviar</button>
+            <button className="boton-enviar" type="submit">Guardar</button>
           </form>
         </div>
       </div>

@@ -10,7 +10,7 @@ const Inicio = () => {
       <div className='grid1'>
       <div>
         <h1 className='titulos'>Bienvenidos a Nutrizone</h1>
-        <h4 className='espacios-verticales'>El lugar donde compras sano, rico y con la mejor calidad</h4>
+        <h4 className='espacios-verticales'>El lugar donde compras sano, rico y con la mejor calidad. <br /> ¿Qué estas esperando para probar nuestros productos?</h4>
         <Link to="/productos/frutos-secos"><button className='boton-comenzar'>Comenzar</button></Link>
       </div>
       <div>
