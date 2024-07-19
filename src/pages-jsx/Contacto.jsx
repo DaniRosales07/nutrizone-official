@@ -7,8 +7,8 @@ const Contacto = () => {
     <div>
         <div className='espacio-costados'>
             <div>
-                <h1 className="titulos">¡Hablemos! </h1>
-                <h4 className="titulos">Estamos aquí para responder a todas tus preguntas, escuchar tus comentarios y atender tus necesidades. Si deseas ponerte en contacto con nosotros, podes hacerlo a través de los siguientes medios: </h4>
+                <h2 className="titulos">¡Hablemos! </h2>
+                <p className="titulos">Estamos aquí para responder a todas tus preguntas, escuchar tus comentarios y atender tus necesidades. Si deseas ponerte en contacto con nosotros, podes hacerlo a través de los siguientes medios: </p>
             </div>
 
             <div className='container-contactos'>
