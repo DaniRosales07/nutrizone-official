@@ -8,13 +8,13 @@ function Carrousel ()
 <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active" data-bs-interval="5000">
-      <img src="https://firebasestorage.googleapis.com/v0/b/nutrizone-official.appspot.com/o/2_1.webp?alt=media&token=764762b9-3f41-4c3e-8fee-4360a721eb0f" className="d-block w-100" alt="..."/>
+      <img src="https://firebasestorage.googleapis.com/v0/b/nutrizone-official.appspot.com/o/banner1.png?alt=media&token=afd33a19-83e5-4764-877c-08cdecb51148" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item" data-bs-interval="3000">
-      <img src="https://firebasestorage.googleapis.com/v0/b/nutrizone-official.appspot.com/o/3_1.webp?alt=media&token=764762b9-3f41-4c3e-8fee-4360a721eb0f" className="d-block w-100" alt="..."/>
+      <img src="https://firebasestorage.googleapis.com/v0/b/nutrizone-official.appspot.com/o/banner2.png?alt=media&token=afd33a19-83e5-4764-877c-08cdecb51148" className="d-block w-100" alt="..."/>
     </div>
     <div className="carousel-item" data-bs-interval="3000">
-      <img src="https://firebasestorage.googleapis.com/v0/b/nutrizone-official.appspot.com/o/4_1.webp?alt=media&token=764762b9-3f41-4c3e-8fee-4360a721eb0f" className="d-block w-100" alt="..."/>
+      <img src="https://firebasestorage.googleapis.com/v0/b/nutrizone-official.appspot.com/o/banner3.png?alt=media&token=afd33a19-83e5-4764-877c-08cdecb51148" className="d-block w-100" alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
